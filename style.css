@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(197, 209, 216, 0.897);
+    line-height: 1.6;
+}
+.container{
+    display:grid;
+    grid-template-rows:2fr 3fr repeat(3, 2fr);
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-areas:
+    "header header header header"
+    "main main main sidebar"
+    "content1 content2 content3 sidebar"
+    "content4 content5 content6 sidebar"
+    "footer footer footer footer";
+    border:3px solid yellow;
+    gap: 10px;
+}
+header{
+    grid-area:header;
+    
+}
+main{
+    grid-area:main;
+     border: 3px solid blue;
+}
+#sidebar{
+    grid-area:sidebar;
+     border: 3px solid yellow;
+}
+.content1{
+    grid-area:content1;
+     border: 3px solid green;
+}
+
+.content2{
+    grid-area:content2;
+     border: 3px solid green;
+}
+.content3{
+    grid-area:content3;
+     border: 3px solid gold;
+}
+.content4{
+    grid-area:content4;
+     border: 3px solid blue;
+}
+.content5{
+    grid-area:content5;
+     border: 3px solid grey;
+}
+.content6{
+    grid-area:content6;
+     border: 3px solid red;
+}
+footer{
+    grid-area:footer;
+     border: 3px solid black;
+}
+
+@media only screen and (max-width:990px) {
+    .container{
+        grid-template-columns:2fr 2fr;
+        grid-template-rows: 2fr 2fr 3fr repeat(4, 2fr);
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "sidebar sidebar"
+        "content1 content2"
+        "content3 content4"
+        "content5 content6"
+        "footer footer";
+}
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns:2fr;
+        grid-template-rows: repeat(2, 2fr) 3fr repeat(7, 2fr);
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "content5"
+        "content6"
+        "footer";
+}
+}
+
+header .intro{
+    text-align: center;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.intro p{
+    font-style: italic;
+}
+p{
+    margin-bottom: 1rem;
+}
+.intro time{
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.nav{
+    background-color:#030303;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding:0.5rem;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul a{
+    text-decoration: none;
+    color: #fff;
+    padding:0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav ul a:hover{
+    background-color: #333;
+}
