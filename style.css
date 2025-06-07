@@ -57,7 +57,7 @@ footer{
     text-align: center;
 }
 /* footer code end */
-/* header, master header and nav bar */
+/* header, master header and nav bar start */
 header .intro{
     text-align: center;
 }
@@ -102,9 +102,9 @@ p{
 .nav ul a:hover{
     background-color: #333;
 }
-/* header, master header and nav bar */
+/* header, master header and nav bar end*/
 
-/* main container */
+/* main container start*/
 main .column{
     column-count: 2;
     column-gap: 1.5rem;
@@ -141,27 +141,33 @@ main{
     list-style-type:square;
     list-style-position: outside;
 }
+/* sidebar start in main */
 .trend h2{
     border-bottom:2px solid #030303;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.trend ul li{
-    list-style-type: none;
+.trend ul{
+    list-style: none;
     padding:0.5rem 0;
-    border-bottom: 1px dotted #ccc;
-    list-style-position: outside;
+   
+}
+.trend ul li{
+ border-bottom: 1px dotted #ccc;
+ padding:0.5rem 0;
 }
 .trend ul li a{
     text-decoration: none;
     color: #030303;
+    font-weight: bold;
 }
 .trend ul li a:hover{
     color: #ccc;
 }
-/* main conatiner */
+/* sidebar end in main */
+/* main conatiner end */
 
-/* media querry */
+/* media querry start */
 @media only screen and (max-width:992px) {
     .container{
         grid-template-columns:2fr 2fr;
@@ -198,4 +204,4 @@ main .column{
         "content6";
 } 
 }
-/* media querry */
+/* media querry end*/
